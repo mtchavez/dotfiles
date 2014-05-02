@@ -1,0 +1,19 @@
+{
+  "strict"    : true,
+  "undef"     : true,
+  "unused"    : true,
+  "forin"     : true,
+  "latedef"   : true,
+  "newcap"    : true,
+  "noarg"     : true,
+  "noempty"   : true,
+  "quotmark"  : "double",
+  "trailing"  : true,
+  "mootools"  : true,
+  "jquery"    : true,
+  "browser"   : true,
+  "forin"     : false,
+  "onevar"    : true,
+  "noempty"   : true,
+  "camelcase" : true
+}

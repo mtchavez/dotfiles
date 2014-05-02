@@ -1,0 +1,56 @@
+# Create a new directory and enter it
+function mkd() {
+	mkdir -p "$@" && cd "$@"
+}
+
+# Determine size of a file or total size of a directory
+function fs() {
+	if du -b /dev/null > /dev/null 2>&1; then
+		local arg=-sbh
+	else
+		local arg=-sh
+	fi
+	if [[ -n "$@" ]]; then
+		du $arg -- "$@"
+	else
+		du $arg .[^.]* *
+	fi
+}
+
+# All the dig info
+function digga() {
+	dig +nocmd "$1" any +multiline +noall +answer
+}
+
+# Find process
+function psapp() {
+ ps -ax | grep -i $1 | grep -i -v  "grep.-i.$1" | awk '{print $1}'
+}
+
+# Kill process
+function killapp() {
+   kill $(psapp $1)
+}
+
+# Package a VMWare Vagrant Box
+function package_vmware() {
+  ID=$(ls .vagrant/machines/default/vmware_fusion | grep -v id | grep -v lock | grep -v action_provision)
+  DIR=".vagrant/machines/default/vmware_fusion/${ID}"
+  VDISK="$DIR/Virtual Disk.vmdk"
+  VDISKMANAGER="/Applications/VMware Fusion.app/Contents/Library/vmware-vdiskmanager"
+  "$VDISKMANAGER" -d "$VDISK"
+  "$VDISKMANAGER" -k "$VDISK"
+  pushd $DIR
+  if [ -f vmware.box ]; then rm vmware.box; fi
+  tar cvzf vmware.box *
+  popd
+  mv "${DIR}/vmware.box" .
+  echo "Packaged VM to ./vmware.box"
+}
+
+# Clean up vmnet for Vagrant
+function clean_vmnet() {
+  ps aux | grep vmnet | grep -v grep | awk '{print $2}' | xargs sudo kill
+}
+
+# vim: ft=sh:

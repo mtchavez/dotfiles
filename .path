@@ -1,0 +1,6 @@
+export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:$HOME/bin/packer:/usr/local/share/npm/bin:$PATH
+export NODE_PATH=/usr/local/share/npm/lib/node_modules:/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
+# export R_HOME=/Library/Frameworks/R.framework/Resources
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:RHOME/bin
+
+# vim: ft=sh:

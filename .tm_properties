@@ -1,0 +1,16 @@
+# This blows up the file browser
+# include = "{.tm_properties,.gitignore}"
+#
+exclude               = "{config.ru,coverage,coverage.data,.DS_Store}"
+excludeDirectories    = "{tmp,log,doc,coverage}"
+# excludeInFileChooser  = "{tmp,log,doc,.DS_Store,.gitkeep,coverage,coverage.data}"
+# excludeInFolderSearch = "{tmp,log,doc,.DS_Store,coverage,coverage.data,.DS_Store}"
+
+fontName = "Monaco"
+fontSize = 13
+
+# softWrap = true
+tabSize        = 2
+softTabs       = true
+showInvisibles = true
+showWrapColumn = true

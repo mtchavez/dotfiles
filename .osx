@@ -172,10 +172,10 @@ defaults write com.apple.dock mru-spaces -bool false
 # Top left screen corner → Mission Control
 defaults write com.apple.dock wvous-tl-corner -int 2
 defaults write com.apple.dock wvous-tl-modifier -int 0
-# Top right screen corner → Desktop
+# Top right screen corner → Notification Center
 defaults write com.apple.dock wvous-tr-corner -int 12
 defaults write com.apple.dock wvous-tr-modifier -int 0
-# Bottom left screen corner → Start screen saver
+# Bottom left screen corner → Dashboard
 defaults write com.apple.dock wvous-bl-corner -int 7
 defaults write com.apple.dock wvous-bl-modifier -int 0
 

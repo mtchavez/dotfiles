@@ -68,6 +68,10 @@ alias pumpitup="osascript -e 'set volume 7'"
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
+# Mysql
+alias mystart="mysql.server start"
+alias mystop="killapp mysql"
+
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 

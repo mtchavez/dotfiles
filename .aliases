@@ -72,6 +72,10 @@ alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 alias mystart="mysql.server start"
 alias mystop="killapp mysql"
 
+# Vagrant
+alias v="vagrant"
+alias vag="vagrant"
+
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 

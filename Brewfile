@@ -46,6 +46,7 @@ install mercurial
 install the_silver_searcher
 install node
 install phantomjs
+install hub
 
 # DBs
 install influxdb

@@ -22,3 +22,6 @@ Thumbs.db
 
 # Vagrant
 .vagrant
+
+# Extra setup marked private
+.extra

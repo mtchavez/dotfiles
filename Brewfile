@@ -50,3 +50,5 @@ install hub
 
 # DBs
 install influxdb
+install elasticsearch
+install postgresql

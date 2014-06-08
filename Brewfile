@@ -52,3 +52,6 @@ install hub
 install influxdb
 install elasticsearch
 install postgresql
+
+# Programming Languages
+install r

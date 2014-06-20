@@ -25,3 +25,5 @@ Thumbs.db
 
 # Extra setup marked private
 .extra
+
+vendor/ruby/

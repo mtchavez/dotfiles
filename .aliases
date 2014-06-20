@@ -79,4 +79,7 @@ alias vag="vagrant"
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
+# Ruby
+alias be="bundle exec"
+
 # vim: ft=sh:

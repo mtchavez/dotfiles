@@ -8,14 +8,14 @@ fi
 function git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/*\(.*\)/\1/"
 }
-function git-unpushed {
+function git_unpushed {
     brinfo=$(git branch -v | grep git-branch-name)
     if [[ $brinfo =~ ("[ahead "([[:digit:]]*)]) ]]
     then
         echo " (${BASH_REMATCH[2]})"
     fi
 }
-function git-dirty {
+function git_dirty {
     st=$(git status 2>/dev/null | tail -n 1)
     if [[ $st != "nothing to commit (working directory clean)" ]]
     then

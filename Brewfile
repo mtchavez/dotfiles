@@ -47,7 +47,6 @@ install mercurial
 #install macvim --override-system-vim --with-lua --with-luajit
 
 install the_silver_searcher
-install node
 install phantomjs
 install hub
 
@@ -58,3 +57,7 @@ install postgresql
 
 # Programming Languages
 install r
+install node
+
+# System
+install fig

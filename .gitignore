@@ -26,4 +26,10 @@ Thumbs.db
 # Extra setup marked private
 .extra
 
+# Rails
 vendor/ruby/
+
+# Ruby
+.bundle
+.ruby-version
+.ruby-gemset

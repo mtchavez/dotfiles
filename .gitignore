@@ -33,3 +33,5 @@ vendor/ruby/
 .bundle
 .ruby-version
 .ruby-gemset
+.env
+Procfile.dev

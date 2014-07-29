@@ -1,0 +1,37 @@
+export PREVPWD=`pwd`
+export PREVENV_PATH=
+export VENV_ACTIVE=0
+
+handle_virtualenv(){
+  if [ "$PWD" != "$PREVPWD" ]; then
+    PREVPWD="$PWD";
+    if [ -n "$PREVENV_PATH" ]; then
+      if [ "`echo "$PWD" | grep -c $PREVENV_PATH`" = "0"  ]; then
+        if [ $VENV_ACTIVE == 1 ]; then
+          deactivate
+        fi
+        VENV_ACTIVE=0
+        PREVENV_PATH=
+      fi
+    fi
+
+    # activate virtualenv dynamically
+    if [ -e "$PWD/.venv" ] && [ "$PWD" != "$PREVENV_PATH" ]; then
+      PREVENV_PATH="$PWD"
+      name=`cat $PWD/.venv`
+      if [ -z $name ]; then
+          name=`basename $PWD`
+      fi
+      workon $name
+      VENV_ACTIVE=1
+    fi
+  fi
+}
+
+export PROMPT_COMMAND=handle_virtualenv
+
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+export WORKON_HOME=~/.virtualenvs
+source `which virtualenvwrapper.sh`
+
+# vim: ft=sh:

@@ -52,5 +52,14 @@ fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# Python virtualenv
+if [ -f ~/.bash_virtualenv ]; then
+    if [ -f $(which virtualenvwrapper.sh) ]; then
+        . ~/.bash_virtualenv
+    else
+        echo "No virtualenvwrapper found"
+    fi
+fi
+
 # Load RVM Last into shell as a function
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

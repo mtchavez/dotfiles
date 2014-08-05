@@ -35,3 +35,6 @@ vendor/ruby/
 .ruby-gemset
 .env
 Procfile.dev
+
+# R
+.Rhistory

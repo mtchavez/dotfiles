@@ -82,4 +82,8 @@ alias reload="exec $SHELL -l"
 # Ruby
 alias be="bundle exec"
 
+# Rstudio
+# rJava complains about not finding JDK without explicitly setting this
+alias rstudio="LD_LIBRARY_PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/jre/lib/server: open -a rstudio"
+
 # vim: ft=sh:

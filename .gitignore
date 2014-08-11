@@ -28,6 +28,7 @@ Thumbs.db
 
 # Rails
 vendor/ruby/
+coverage/
 
 # Ruby
 .bundle

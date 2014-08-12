@@ -39,3 +39,6 @@ Procfile.dev
 
 # R
 .Rhistory
+
+# Python
+.venv

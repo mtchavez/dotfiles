@@ -22,7 +22,6 @@ cask install imageoptim 2> /dev/null
 cask install istat-menus 2> /dev/null
 cask install iterm2 2> /dev/null
 cask install julia 2> /dev/null
-cask install reeder 2> /dev/null
 cask install serf 2> /dev/null
 cask install spotify 2> /dev/null
 cask install sublime-text 2> /dev/null

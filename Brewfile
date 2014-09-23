@@ -12,7 +12,7 @@ install caskroom/cask/brew-cask
 
 # Install GNU core utilities (those that come with OS X are outdated)
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-install apple-gcc42
+#install apple-gcc42
 install coreutils
 # Install some other useful utilities like `sponge`
 install moreutils
@@ -44,7 +44,7 @@ install bazaar
 install mercurial
 
 # Install MacVim with lua
-#install macvim --override-system-vim --with-lua --with-luajit
+install macvim --override-system-vim --with-lua --with-luajit
 
 install the_silver_searcher
 install phantomjs
@@ -52,12 +52,14 @@ install hub
 
 # DBs
 install influxdb
-install elasticsearch
+# Needs java
+# install elasticsearch
 install postgresql
 
 # Programming Languages
-install r
+#install r
 install node
+install go
 
 # System
 install fig

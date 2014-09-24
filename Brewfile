@@ -59,7 +59,8 @@ install postgresql
 # Programming Languages
 #install r
 install node
-install go
+install go --cross-compile-common
+install python --with-brewed-openssl
 
 # System
 install fig

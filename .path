@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:$HOME/bin/packer:/usr/local/share/npm/bin:$PATH
+export PATH=/usr/local:/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:$HOME/bin/packer:/usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/local/share/npm/lib/node_modules:/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
 
 # Go PATH
@@ -9,7 +9,7 @@ export PATH=$GOBIN:$PATH
 export PATH=$PATH:$HOME/Projects/go/bin
 
 # Python
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+# export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 # export PYTHONPATH=$PYTHONPATH:$HOME/Library/Python/2.7/lib/python/site-packages
 export VIRTENV=$HOME/.virtualenvs
 export PYTHONSTARTUP=$HOME/.pythonrc.py

@@ -60,12 +60,13 @@ install influxdb
 # Needs java
 # install elasticsearch
 install postgresql
+install sqlite
 
 # Programming Languages
 #install r
 install node
 install go --cross-compile-common
-install python --with-brewed-openssl
+install python --universal --framework --with-brewed-openssl
 
 # System
 install fig

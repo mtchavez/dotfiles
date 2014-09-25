@@ -29,7 +29,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # GCC
 export CC=/usr/bin/gcc
-export CXX=/usr/bin/gcc
-export CPP=/usr/bin/gcc
+# export CXX=/usr/bin/gcc
+# export CPP=/usr/bin/gcc
 
 # vim: ft=sh:

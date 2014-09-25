@@ -22,6 +22,7 @@ install findutils
 install gnu-sed --default-names
 # Install Bash 4
 install bash
+install bash-completion
 
 # Install wget with IRI support
 install wget --enable-iri
@@ -49,6 +50,10 @@ install macvim --override-system-vim --with-lua --with-luajit
 install the_silver_searcher
 install phantomjs
 install hub
+install rbenv
+install ruby-build
+install rbenv-default-gems
+install rbenv-bundler
 
 # DBs
 install influxdb

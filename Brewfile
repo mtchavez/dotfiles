@@ -44,6 +44,9 @@ install git --with-gettext --with-pcre --with-brewed-openssl
 install bazaar
 install mercurial
 
+# Cloud
+install s3cmd
+
 # Install MacVim with lua
 install macvim --override-system-vim --with-lua --with-luajit
 

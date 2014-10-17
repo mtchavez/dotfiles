@@ -73,3 +73,4 @@ install python --universal --framework --with-brewed-openssl
 
 # System
 install fig
+install httpie

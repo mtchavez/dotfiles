@@ -26,6 +26,9 @@ Thumbs.db
 # Extra setup marked private
 .extra
 
+# SSH extra configs
+.ssh/config*
+
 # Rails
 vendor/ruby/
 coverage/

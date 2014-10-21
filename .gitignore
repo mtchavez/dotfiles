@@ -28,6 +28,7 @@ Thumbs.db
 
 # SSH extra configs
 .ssh/config*
+!.ssh/config.0.base
 
 # Rails
 vendor/ruby/

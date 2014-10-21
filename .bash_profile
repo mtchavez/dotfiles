@@ -63,3 +63,6 @@ fi
 
 # Load RVM Last into shell as a function
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Merge ~/ssh/config* files into one ssh config
+cat $HOME/.ssh/config* > $HOME/.ssh/config

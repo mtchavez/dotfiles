@@ -15,7 +15,7 @@
     untracked = cyan
 [core]
     whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-    editor=mvim
+    editor="mvim -f"
     excludesfile=~/.gitignore
 [alias]
     br = branch

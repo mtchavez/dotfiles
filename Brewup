@@ -1,0 +1,3 @@
+# Homebrew upgrade for `brew bundle /path/to/this/file`
+# Upgrade any already-installed formulae
+upgrade

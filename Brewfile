@@ -4,9 +4,6 @@
 # Make sure we’re using the latest Homebrew
 update
 
-# Upgrade any already-installed formulae
-upgrade
-
 # Cask
 install caskroom/cask/brew-cask
 
@@ -68,7 +65,8 @@ install sqlite
 # Programming Languages
 #install r
 install node
-install go --cross-compile-common
+# Installing from source seems more sane
+# install go --cross-compile-common
 install python --universal --framework --with-brewed-openssl
 
 # System

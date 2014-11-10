@@ -9,7 +9,7 @@ export PATH=$GOBIN:$PATH
 export PATH=$PATH:$HOME/Projects/go/bin
 
 # Python
-# export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 # export PYTHONPATH=$PYTHONPATH:$HOME/Library/Python/2.7/lib/python/site-packages
 export VIRTENV=$HOME/.virtualenvs
 export PYTHONSTARTUP=$HOME/.pythonrc.py

@@ -6,9 +6,10 @@ export NODE_PATH=/usr/local/share/npm/lib/node_modules:/usr/local/lib/node:/usr/
 
 # Go PATH
 export GOPATH=$HOME/Projects/go
-export GOROOT=/usr/local/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 export GOBIN="$GOROOT/bin"
-export PATH=$HOME/Projects/go/bin:$GOBIN:$PATH
 
 # Python
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
@@ -22,8 +23,11 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 #export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH/Developer/NVIDIA/CUDA-5.5/lib
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home`
-export PATH=$PATH:$JAVA_HOME/bin
+if [ -f /usr/libexec/java_home ]
+then
+    export JAVA_HOME=`/usr/libexec/java_home`
+    export PATH=$PATH:$JAVA_HOME/bin
+fi
 
 # R
 # export R_HOME=/Library/Frameworks/R.framework/Resources

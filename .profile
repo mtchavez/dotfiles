@@ -10,8 +10,8 @@ export PATH=$PATH:$GOROOT/bin
 export GOBIN="$GOROOT/bin"
 
 # Python
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages
-# export PYTHONPATH=$PYTHONPATH:$HOME/Library/Python/2.7/lib/python/site-packages
+# Path for Homebrew Python
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 export VIRTENV=$HOME/.virtualenvs
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache

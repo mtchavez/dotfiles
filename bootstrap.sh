@@ -13,6 +13,7 @@ else
 	echo
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		doIt
+        chmod 644 $HOME/.ssh/config*
 	fi
 fi
 unset doIt

@@ -21,7 +21,9 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 #export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH/Developer/NVIDIA/CUDA-5.5/lib
 
 # Java
-if [ -f /usr/libexec/java_home ]
+# check if java_home is set and set JAVA_HOME if one is found
+/usr/libexec/java_home >/dev/null 2>&1
+if [ $? -eq 0 ]
 then
     export JAVA_HOME=`/usr/libexec/java_home`
     export PATH=$PATH:$JAVA_HOME/bin

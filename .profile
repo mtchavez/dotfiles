@@ -14,7 +14,6 @@ export GOBIN="$GOROOT/bin"
 export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
 export VIRTENV=$HOME/.virtualenvs
 export PYTHONSTARTUP=$HOME/.pythonrc.py
-export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 # CUDA
 #export PATH=$PATH:/Developer/NVIDIA/CUDA-5.5/bin

@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# MOTD
+#
+echo -e "   ____  _____    _  __
+  / __ \/ ___/   | |/ /
+ / / / /\__ \    |   /
+/ /_/ /___/ /   /   |
+\____//____/   /_/|_|
+"
+
+echo "system:       `uname -v`"
+echo "hostname:     `hostname`"
+echo "IP:           `dig +short myip.opendns.com @resolver1.opendns.com`"
+echo "date:         `TZ=UTC date`"
+echo "----------------------------------------"
+echo "ruby:         `ruby -v`"
+echo "python:       `python -c "import platform; print(platform.python_version())"`"
+echo "nodejs:       `node -v`"
+if [ `which brew` ]
+then
+echo "brew:         `brew -v`"
+else
+echo "brew:         not installed"
+fi
+echo
+
+# vim: ft=sh:

@@ -28,6 +28,10 @@ then
     export PATH=$PATH:$JAVA_HOME/bin
 fi
 
+# Ruby
+# Nokogiri is happy with system libraries
+export NOKOGIRI_USE_SYSTEM_LIBRARIES=1
+
 # R
 # export R_HOME=/Library/Frameworks/R.framework/Resources
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:RHOME/bin

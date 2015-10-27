@@ -49,6 +49,11 @@ fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# Setup nvm
+if [ -f ~/.nvm/nvm.sh ]; then
+  . ~/.nvm/nvm.sh
+fi
+
 # Python virtualenv
 if [ -f ~/.bash_virtualenv ]; then
     if [ -f $(which virtualenvwrapper.sh) ]; then

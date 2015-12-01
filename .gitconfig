@@ -37,3 +37,5 @@
     default = upstream
 [pull]
     default = upstream
+[rebase]
+    autosquash = true

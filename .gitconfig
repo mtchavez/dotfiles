@@ -27,9 +27,13 @@
     lgp = log --pretty=oneline --abbrev-commit
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lgs = log --stat
+    lgsp = log --stat -p
     ls = ls-files
     pl = !git fetch -p && git pull --ff-only
     st = status
+    ss = show --stat
+    ssp = show --stat -p
 [user]
     name = Chavez
     email = matthew@el-chavez.me
@@ -37,5 +41,6 @@
     default = upstream
 [pull]
     default = upstream
+    rebase = true
 [rebase]
     autosquash = true

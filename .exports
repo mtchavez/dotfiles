@@ -34,16 +34,17 @@ export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 export DOCKER_HOST=tcp://192.168.59.103:2376
 
-if [[ $(docker-machine ls | grep dev) ]]
+# Load in default docker env from machine
+if [[ $(docker-machine ls | grep default) ]]
 then
-    if [[ $(docker-machine ls | grep -i dev | grep -i stopped) ]]
+    if [[ $(docker-machine ls | grep -i default | grep -i stopped) ]]
     then
         # Probably shouldn't run start
-        # docker-machine start dev
-        echo "docker-machine dev isn't running."
-        echo "Start with: docker-machine start dev"
+        # docker-machine start default
+        echo "docker-machine default isn't running."
+        echo "Start with: docker-machine start"
     fi
-    eval "$(docker-machine env dev)"
+    eval "$(docker-machine env default)"
 fi
 
 # vim: ft=sh:

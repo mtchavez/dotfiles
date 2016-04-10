@@ -49,6 +49,9 @@ fi
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# Shim pyenv
+eval "$(pyenv init -)"
+
 # Setup nvm
 if [ -f ~/.nvm/nvm.sh ]; then
   . ~/.nvm/nvm.sh

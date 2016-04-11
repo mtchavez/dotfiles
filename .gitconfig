@@ -38,6 +38,7 @@
 [user]
     name = Chavez
     email = matthew@el-chavez.me
+    signingkey = C810C27E
 [push]
     default = upstream
 [pull]

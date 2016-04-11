@@ -20,20 +20,21 @@
 [alias]
     br = branch
     ci = commit
+    cm = commit -S -m
     co = checkout
     dc = diff --cached
     df = diff
     lg = log -p
     lgp = log --pretty=oneline --abbrev-commit
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     lgs = log --stat
     lgsp = log --stat -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ls = ls-files
     pl = !git fetch -p && git pull --ff-only
-    st = status
     ss = show --stat
     ssp = show --stat -p
+    st = status
 [user]
     name = Chavez
     email = matthew@el-chavez.me

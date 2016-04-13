@@ -57,4 +57,14 @@ function clean_vmnet() {
   ps aux | grep vmnet | grep -v grep | awk '{print $2}' | xargs sudo kill
 }
 
+#
+# Remove .pyc files in supplied directory
+#
+# usage:
+#        rmpyc .
+#        rmpyc ./root/path/for/files
+function rmpyc() {
+    find $1 -name "*.pyc" -print0 | xargs -0 rm -rf
+}
+
 # vim: ft=sh:

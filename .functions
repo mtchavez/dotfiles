@@ -32,10 +32,6 @@ function killapp() {
    kill $(psapp $1)
 }
 
-function sstu() {
-  ssh -F ~/.ssh/tuconfig $1
-}
-
 # Package a VMWare Vagrant Box
 function package_vmware() {
   ID=$(ls .vagrant/machines/default/vmware_fusion | grep -v id | grep -v lock | grep -v action_provision)

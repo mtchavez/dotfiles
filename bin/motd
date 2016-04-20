@@ -2,13 +2,6 @@
 #
 # MOTD
 #
-echo -e "   ____  _____    _  __
-  / __ \/ ___/   | |/ /
- / / / /\__ \    |   /
-/ /_/ /___/ /   /   |
-\____//____/   /_/|_|
-"
-
 echo "system:       `uname -v`"
 echo "hostname:     `hostname`"
 echo "IP:           `dig +short myip.opendns.com @resolver1.opendns.com`"

@@ -597,7 +597,7 @@ ricochet(){
 		--name ricochet \
 		${DOCKER_REPO_PREFIX}/ricochet
 }
-rstudio(){
+rstudiodocker(){
 	del_stopped rstudio
 
 	docker run -d \

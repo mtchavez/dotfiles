@@ -7,8 +7,9 @@ export DOCKER_REPO_PREFIX=jess
 # Helper Functions
 #
 dcleanup(){
-	docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
-	docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null
+	docker rm -v $(docker ps --filter "status=exited" -q 2>/dev/null) 2>/dev/null
+	docker rmi $(docker images --filter "dangling=true" -q 2>/dev/null) 2>/dev/null
+    docker rm $(docker ps -a --filter "status=dead" -f -q 2> /dev/null) 2>/dev/null
 }
 del_stopped(){
 	local name=$1

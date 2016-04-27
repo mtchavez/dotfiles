@@ -841,7 +841,7 @@ transmission(){
 	sudo hostess add transmission $(docker inspect --format "{{.NetworkSettings.Networks.bridge.IPAddress}}" transmission)
 	browser-exec "http://transmission:9091"
 }
-vagrant(){
+vagrant_docker(){
 	del_stopped vagrant
 
 	# modprobe the module

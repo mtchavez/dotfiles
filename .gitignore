@@ -47,3 +47,4 @@ Procfile.dev
 
 # Python
 .venv
+.python-version

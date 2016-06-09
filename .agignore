@@ -1,2 +1,11 @@
 vendor/
 tmp/
+.git
+*.map
+*.min*
+*.sql
+*.tags*
+*.gemtags*
+*.tmp*
+*.old
+*.bak

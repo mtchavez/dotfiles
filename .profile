@@ -11,8 +11,10 @@ export GOBIN="$GOROOT/bin"
 
 # Python
 # Path for Homebrew Python
-export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
+# NOTE: pyenv doesn't suggest setting PYTHONPATH
+# export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
 export VIRTENV=$HOME/.virtualenvs
+export WORKON_HOME=$HOME/.virtualenvs
 export PYTHONSTARTUP=$HOME/.pythonrc.py
 
 # CUDA

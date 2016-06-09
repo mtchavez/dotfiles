@@ -50,7 +50,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Shim pyenv
-eval "$(pyenv init -)"
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # Setup nvm
 if [ -f ~/.nvm/nvm.sh ]; then
@@ -58,13 +60,14 @@ if [ -f ~/.nvm/nvm.sh ]; then
 fi
 
 # Python virtualenv
-if [ -f ~/.bash_virtualenv ]; then
-    if [ -f $(which virtualenvwrapper.sh) ]; then
-        . ~/.bash_virtualenv
-    else
-        echo "No virtualenvwrapper found"
-    fi
-fi
+# NOTE: use pyenv to manage virtualenvs
+# if [ -f ~/.bash_virtualenv ]; then
+#     if [ -f $(which virtualenvwrapper.sh) ]; then
+#         . ~/.bash_virtualenv
+#     else
+#         echo "No virtualenvwrapper found"
+#     fi
+# fi
 
 # Load RVM Last into shell as a function
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

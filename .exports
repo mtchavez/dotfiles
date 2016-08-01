@@ -29,22 +29,22 @@ export CC=/usr/bin/gcc
 # export CXX=/usr/bin/gcc
 # export CPP=/usr/bin/gcc
 
-# Docker
-export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
+# Docker - Outdated; Using Docker.app and Docker Toolbox
+# export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
+# export DOCKER_TLS_VERIFY=1
+# export DOCKER_HOST=tcp://192.168.59.103:2376
 
 # Load in default docker env from machine
-if [[ $(docker-machine ls | grep default) ]]
-then
-    if [[ $(docker-machine ls | grep -i default | grep -i stopped) ]]
-    then
-        # Probably shouldn't run start
-        # docker-machine start default
-        echo "docker-machine default isn't running."
-        echo "Start with: docker-machine start"
-    fi
-    eval "$(docker-machine env default)"
-fi
+# if [[ $(docker-machine ls | grep default) ]]
+# then
+#     if [[ $(docker-machine ls | grep -i default | grep -i stopped) ]]
+#     then
+#         # Probably shouldn't run start
+#         # docker-machine start default
+#         echo "docker-machine default isn't running."
+#         echo "Start with: docker-machine start"
+#     fi
+#     eval "$(docker-machine env default)"
+# fi
 
 # vim: ft=sh:

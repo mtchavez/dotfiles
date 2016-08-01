@@ -21,6 +21,7 @@ echo "brew:         `brew -v`"
 else
 echo "brew:         not installed"
 fi
+echo "docker:       `docker -v`"
 echo "----------------------------------------"
 echo
 

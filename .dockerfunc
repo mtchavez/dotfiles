@@ -4,6 +4,22 @@
 export DOCKER_REPO_PREFIX=jess
 
 #
+# Compose Helpers
+#
+# NOTE: this overrides 'dc' which is a reverse polish notation calculator
+alias dc="docker-compose"
+alias dcr="docker-compose run"
+alias dcs="docker-compose stop"
+
+#
+# Machine helpers
+#
+alias dm="docker-machine"
+alias dml="docker-machine ls"
+alias dmip="docker-machine ip"
+alias dmenv="docker-machine env"
+
+#
 # Helper Functions
 #
 dcleanup(){
@@ -87,13 +103,14 @@ audacity(){
 		--name audacity \
 		${DOCKER_REPO_PREFIX}/audacity
 }
-aws(){
-	docker run -it --rm \
-		-v $HOME/.aws:/root/.aws \
-		--log-driver none \
-		--name aws \
-		${DOCKER_REPO_PREFIX}/awscli "$@"
-}
+# NOTE: Probably don't want this
+# aws(){
+# 	docker run -it --rm \
+# 		-v $HOME/.aws:/root/.aws \
+# 		--log-driver none \
+# 		--name aws \
+# 		${DOCKER_REPO_PREFIX}/awscli "$@"
+# }
 bees(){
 	docker run -it --rm \
 		-e NOTARY_TOKEN \

@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - db/schema.rb
     - vendor/**/*
+    - tmp/*
 
 Documentation:
   Enabled: false

@@ -10,6 +10,14 @@ Documentation:
 Metrics/MethodLength:
   Max: 15
 
+Metrics/BlockLength:
+  CountComments: false
+  Max: 25
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
 Metrics/LineLength:
   Max: 120
 

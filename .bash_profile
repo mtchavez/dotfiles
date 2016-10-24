@@ -50,7 +50,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # Shim pyenv
-export PYENV_ROOT=/usr/local/var/pyenv
+# export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 

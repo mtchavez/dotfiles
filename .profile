@@ -1,6 +1,8 @@
 # Setup PATH
-export PATH=/usr/local:/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:usr/local/share/npm/bin:$PATH
+export PATH=/usr/local:/usr/local/bin:/usr/bin:/usr/local/sbin:usr/local/share/npm/bin:$PATH
 export NODE_PATH=/usr/local/share/npm/lib/node_modules:/usr/local/lib/node:/usr/local/lib/node_modules:$NODE_PATH
+# Add current directory bin and $HOME/bin to path
+export PATH="`pwd`/bin":$HOME/bin:$PATH
 
 # Go PATH
 export GOPATH=$HOME/Projects/go

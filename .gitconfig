@@ -19,7 +19,7 @@
     excludesfile=~/.gitignore
     commentChar = %
 [alias]
-    br = branch
+    br = branch -vv
     ci = commit
     cm = commit -S -m
     co = checkout

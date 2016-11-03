@@ -46,6 +46,7 @@
     default = upstream
     rebase = true
 [rebase]
-    autosquash = true
+    autoSquash = true
+    autoStash = true
 [commit]
     gpgsign = true

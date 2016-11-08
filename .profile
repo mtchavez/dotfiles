@@ -13,8 +13,7 @@ export GOBIN="$GOROOT/bin"
 
 # Python
 # Path for Homebrew Python
-# NOTE: pyenv doesn't suggest setting PYTHONPATH
-# export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
+export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
 export VIRTENV=$HOME/.virtualenvs
 export WORKON_HOME=$HOME/.virtualenvs
 export PYTHONSTARTUP=$HOME/.pythonrc.py
@@ -37,7 +36,7 @@ fi
 export NOKOGIRI_USE_SYSTEM_LIBRARIES=1
 
 # Chef
-export PATH=/opt/chefdk/bin:$PATH
+# export PATH=/opt/chefdk/bin:$PATH
 
 # R
 # export R_HOME=/Library/Frameworks/R.framework/Resources

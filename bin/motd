@@ -21,7 +21,16 @@ echo "brew:         `brew -v`"
 else
 echo "brew:         not installed"
 fi
+if [ `which go` ]; then
+echo "go:           `go version`"
+else
+echo "go:           not installed"
+fi
+if [ `which docker` ]; then
 echo "docker:       `docker -v`"
+else
+echo "docker:       not installed"
+fi
 echo "----------------------------------------"
 echo
 

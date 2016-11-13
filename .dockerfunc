@@ -191,7 +191,7 @@ chrome(){
 		--host-resolver-rules="$map" $args
 
 }
-consul(){
+dconsul(){
 	del_stopped consul
 
 	# check if we passed args and if consul is running

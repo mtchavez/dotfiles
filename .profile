@@ -5,7 +5,7 @@ export NODE_PATH=/usr/local/share/npm/lib/node_modules:/usr/local/lib/node:/usr/
 export PATH="`pwd`/bin":$HOME/bin:$PATH
 
 # Go PATH
-export GOPATH=$HOME/Projects/go
+export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin

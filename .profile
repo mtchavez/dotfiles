@@ -17,6 +17,8 @@ export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
 export VIRTENV=$HOME/.virtualenvs
 export WORKON_HOME=$HOME/.virtualenvs
 export PYTHONSTARTUP=$HOME/.pythonrc.py
+export CFLAGS=-I$(brew --prefix)/include:$CFLAGS
+export LDFLAGS=-L$(brew --prefix)/lib:$LDFLAGS
 
 # CUDA
 #export PATH=$PATH:/Developer/NVIDIA/CUDA-5.5/bin

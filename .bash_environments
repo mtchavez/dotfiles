@@ -1,8 +1,10 @@
 export PREVPWD=`pwd`
 export PREVENV_PATH=
+export PREVNVM_PATH=
 export VENV_ACTIVE=0
+export NVM_ACTIVE=0
 
-handle_virtualenv(){
+handle_environments(){
   if [ "$PWD" != "$PREVPWD" ]; then
     PREVPWD="$PWD";
     if [ -n "$PREVENV_PATH" ]; then
@@ -12,6 +14,15 @@ handle_virtualenv(){
         fi
         VENV_ACTIVE=0
         PREVENV_PATH=
+      fi
+    fi
+    if [ -n "$PREVNVM_PATH" ]; then
+      if [ "`echo "$PWD" | grep -c $PREVNVM_PATH`" = "0"  ]; then
+        if [ $NVM_ACTIVE == 1 ]; then
+          nvm use default
+        fi
+        NVM=0
+        PREVNVM_PATH=
       fi
     fi
 
@@ -25,10 +36,15 @@ handle_virtualenv(){
       workon $name
       VENV_ACTIVE=1
     fi
+    if [ -e "$PWD/.nvmrc" ] && [ "$PWD" != "$PRENVM_PATH" ]; then
+        PREVNVM_PATH="$PWD"
+        nvm use
+        NVM_ACTIVE=1
+    fi
   fi
 }
 
-export PROMPT_COMMAND=handle_virtualenv
+export PROMPT_COMMAND=handle_environments
 
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export WORKON_HOME=~/.virtualenvs

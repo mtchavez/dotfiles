@@ -60,12 +60,8 @@ if [ -f ~/.nvm/nvm.sh ]; then
 fi
 
 # Python virtualenv
-if [ -f ~/.bash_virtualenv ]; then
-    if [ -f $(which virtualenvwrapper.sh) ]; then
-        . ~/.bash_virtualenv
-    else
-        echo "No virtualenvwrapper found"
-    fi
+if [ -f ~/.bash_environments ]; then
+  . ~/.bash_environments
 fi
 
 # Load RVM Last into shell as a function

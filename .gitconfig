@@ -50,3 +50,5 @@
     autoStash = true
 [commit]
     gpgsign = true
+[gc]
+    pruneExpire = 12 hours ago

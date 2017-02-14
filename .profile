@@ -20,6 +20,9 @@ export PYTHONSTARTUP=$HOME/.pythonrc.py
 export CFLAGS=-I$(brew --prefix)/include:$CFLAGS
 export LDFLAGS=-L$(brew --prefix)/lib:$LDFLAGS
 
+# Node nonsense
+export PATH="$PATH:$(yarn global bin)"
+
 # CUDA
 #export PATH=$PATH:/Developer/NVIDIA/CUDA-5.5/bin
 #export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH/Developer/NVIDIA/CUDA-5.5/lib

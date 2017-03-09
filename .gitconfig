@@ -25,6 +25,7 @@
     co = checkout
     dc = diff --cached
     df = diff
+    fp = push --force-with-lease
     lg = log -p
     lgp = log --pretty=oneline --abbrev-commit
     lgs = log --stat

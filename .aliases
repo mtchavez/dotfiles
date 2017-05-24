@@ -6,7 +6,7 @@ alias p="cd ~/Projects"
 
 # Overrides SSH to use multiple configs
 # ie will load ~/.ssh/config.{foo,bar,baz}
-alias ssh='~/bin/ssh'
+# alias ssh='~/bin/ssh'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

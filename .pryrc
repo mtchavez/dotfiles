@@ -26,7 +26,7 @@ Pry custom commands defined in my .pryrc:
   rl 	           Reload and excute the most recently loaded ruby source file.
   rqa(f)           Search for installed RPM.
   sip	           Show location, current ip(s) and network addresses.
-  time(&b)         Display execution timing.
+  timed(&b)        Display execution timing.
 
 =end
 
@@ -148,7 +148,7 @@ def gl2(str)
 end
 
 # Display execution timing
-def time(&block)
+def timed(&block)
   require 'benchmark'
   res = nil
   timing = Benchmark.measure do

@@ -16,6 +16,10 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+# Common Ignores
+*.log
+tmp/
+
 # Vim
 *.swp
 *.un~
@@ -48,3 +52,6 @@ Procfile.dev
 # Python
 .venv
 .python-version
+
+# JS/Node
+node_modules/

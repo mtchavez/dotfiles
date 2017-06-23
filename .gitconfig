@@ -53,3 +53,5 @@
     gpgsign = true
 [gc]
     pruneExpire = 12 hours ago
+[merge]
+    tool = opendiff

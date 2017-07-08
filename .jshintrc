@@ -3,7 +3,7 @@
   "-W079":      true,
   "browser":    true,
   "camelcase":  true,
-  "esversion":  3,
+  "esversion":  6,
   "forin":      false,
   "forin":      true,
   "indent":     2,

@@ -23,6 +23,7 @@ tmp/
 # Vim
 *.swp
 *.un~
+tags
 
 # Vagrant
 .vagrant

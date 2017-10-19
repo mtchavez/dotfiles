@@ -34,6 +34,7 @@
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ls = ls-files
     pl = !git fetch -p && git pull --ff-only
+    plt = !git fetch -p --tags && git pull --tags
     ss = show --stat
     ssp = show --stat -p
     st = status

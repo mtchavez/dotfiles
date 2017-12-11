@@ -21,6 +21,7 @@
 [alias]
     br = branch -vv
     ci = commit
+    clo = !find . -type f -iname *.orig -exec git clean -f {} "\\;"
     cm = commit -S -m
     co = checkout
     dc = diff --cached

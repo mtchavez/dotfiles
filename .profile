@@ -11,6 +11,9 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export GOBIN="$GOROOT/bin"
 
+# Rusth Path
+export PATH=$PATH:$HOME/.cargo/bin
+
 # Python
 # Path for Homebrew Python
 export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$HOME/Library/Python/2.7/lib/python/site-packages:$PYTHONPATH

@@ -93,3 +93,19 @@ alias mystop "killapp mysql"
 # Vagrant
 alias v "vagrant"
 alias vag "vagrant"
+
+#
+# Compose Helpers
+#
+# NOTE: this overrides 'dc' which is a reverse polish notation calculator
+alias dc "docker-compose"
+alias dcr "docker-compose run"
+alias dcs "docker-compose stop"
+
+#
+# Machine helpers
+#
+alias dm "docker-machine"
+alias dml "docker-machine ls"
+alias dmip "docker-machine ip"
+alias dmenv "docker-machine env"

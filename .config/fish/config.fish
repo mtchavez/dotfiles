@@ -2,6 +2,10 @@
 set default_path /usr/bin /usr/sbin /bin /sbin
 set homebrew /usr/local/bin
 
+## Ruby
+. (rbenv init -|psub)
+set rbenv_paths $HOME/.rbenv/shims
+
 ### Go
 set -gx GOPATH $HOME/go
 set -gx GOROOT /usr/local/opt/go/libexec
@@ -18,7 +22,7 @@ set -gx NODE_PATH /usr/local/share/npm/lib/node_modules /usr/local/lib/node /usr
 set python_paths ~/Library/Python/3.6/bin /usr/local/opt/python/libexec/bin
 
 ### Set PATH
-set -gx PATH $go_paths $rust_paths $python_paths $homebrew $default_path
+set -gx PATH $rbenv_paths $go_paths $rust_paths $python_paths $homebrew $default_path
 
 ### Python ###
 set -e PYTHON_VERSION

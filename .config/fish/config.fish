@@ -113,3 +113,8 @@ alias dm "docker-machine"
 alias dml "docker-machine ls"
 alias dmip "docker-machine ip"
 alias dmenv "docker-machine env"
+
+#
+# Autojump
+#
+[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish

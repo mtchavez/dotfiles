@@ -118,3 +118,10 @@ alias dmenv "docker-machine env"
 # Autojump
 #
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+
+#
+# Load ASDF Version Manager if exists and is asked for
+#
+if test -f ~/.asdf/asdf.fish; and contains "true" $ASDF
+  source ~/.asdf/asdf.fish
+end

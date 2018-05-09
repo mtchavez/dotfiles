@@ -2,7 +2,7 @@
 set default_path /usr/bin /usr/sbin /bin /sbin
 set homebrew /usr/local/bin
 
-## Ruby
+### Ruby
 . (rbenv init -|psub)
 set rbenv_paths $HOME/.rbenv/shims
 
@@ -29,6 +29,9 @@ set -e PYTHON_VERSION
 set -g VIRTENV $HOME/.virtualenvs
 set -g WORKON_HOME $HOME/.virtualenvs
 set -g PYTHONSTARTUP $HOME/.pythonrc.py
+
+### Editor ###
+set -x EDITOR vim -f
 
 ### Theme ###
 set -g theme_display_nvm yes

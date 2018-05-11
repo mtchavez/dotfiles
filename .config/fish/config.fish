@@ -118,6 +118,36 @@ alias dmip "docker-machine ip"
 alias dmenv "docker-machine env"
 
 #
+# Sys helpers
+#
+alias lsports "lsof -iTCP -sTCP:LISTEN -P"
+
+# IP
+alias ip "dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip "ipconfig getifaddr en0"
+alias ips "ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# HTTP
+alias sniff "sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump "sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias urlencode 'python -c "import urllib.parse; import sys; print(urllib.parse.quote(sys.argv[1], safe=\"\"));"'
+
+#
+# Utility functions
+#
+function psapp
+  ps -ax | grep -i "$argv" | grep -i -v  "grep.*$argv" | awk '{print $1}'
+end
+
+function digga
+  dig +nocmd "$argv" any +multiline +noall +answer
+end
+
+function killapp
+  kill (psapp $argv)
+end
+
+#
 # Autojump
 #
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish

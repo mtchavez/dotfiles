@@ -24,7 +24,7 @@ function digga() {
 
 # Find process
 function psapp() {
- ps -ax | grep -i $1 | grep -i -v  "grep.-i.$1" | awk '{print $1}'
+ ps -ax | grep -i "$1" | grep -i -v  "grep.*$1" | awk '{print $1}'
 }
 
 # Kill process

@@ -147,6 +147,11 @@ function killapp
   kill (psapp $argv)
 end
 
+function mkp
+  mkdir -p $argv
+  cd $argv
+end
+
 #
 # Autojump
 #

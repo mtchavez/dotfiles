@@ -106,8 +106,9 @@ alias vag "vagrant"
 #
 # NOTE: this overrides 'dc' which is a reverse polish notation calculator
 alias dc "docker-compose"
-alias dcr "docker-compose run"
+alias dcr "docker-compose run --rm"
 alias dcs "docker-compose stop"
+alias dcrm "docker-compose rm -f"
 
 #
 # Machine helpers
@@ -150,6 +151,22 @@ end
 function mkp
   mkdir -p $argv
   cd $argv
+end
+
+# Docker
+
+function dcleanup
+  docker rm -v (docker ps --filter "status=exited" -q 2>/dev/null) 2>/dev/null
+  docker rmi (docker images --filter "dangling=true" -q 2>/dev/null) 2>/dev/null
+  docker rm (docker ps -a --filter "status=dead" -f -q 2> /dev/null) 2>/dev/null
+end
+
+function dremstop
+  set state (docker inspect --format "{{.State.Running}}" $argv 2>/dev/null)
+
+  if $state == "false"
+    docker rm $argv
+  end
 end
 
 #

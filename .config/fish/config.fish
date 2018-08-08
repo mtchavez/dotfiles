@@ -34,6 +34,9 @@ set -g PYTHONSTARTUP $HOME/.pythonrc.py
 ### Editor ###
 set -x EDITOR vim -f
 
+### Git ###
+set -x GIT_TERMINAL_PROMPT 1
+
 ### Theme ###
 set -g theme_display_nvm yes
 set -g theme_display_node yes

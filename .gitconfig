@@ -57,3 +57,5 @@
     pruneExpire = 12 hours ago
 [merge]
     tool = opendiff
+[url "git@github.com:"]
+	insteadOf = https://github.com/

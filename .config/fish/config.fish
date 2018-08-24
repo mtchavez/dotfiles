@@ -68,8 +68,9 @@ set -g theme_newline_cursor yes
 # thefuck --alias | source
 
 ### FZF ###
-set -U FZF_TMUX 1
-set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git"
+set -x FZF_TMUX 1
+# set -U FZF_FIND_FILE_COMMAND "ag -l --hidden --ignore .git"
+set -x FZF_DEFAULT_COMMAND 'rg --files --hidden --smart-case --glob "!.git/*,!*.log,!node_modules/*,!_build/*,!deps/*,!priv/*"'
 
 ### Aliases ###
 

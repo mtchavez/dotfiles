@@ -20,7 +20,7 @@ set rust_paths $HOME/.cargo/bin
 set -gx NODE_PATH /usr/local/share/npm/lib/node_modules /usr/local/lib/node /usr/local/lib/node_modules
 
 ### Python
-set python_paths ~/Library/Python/3.6/bin /usr/local/opt/python/libexec/bin
+set python_paths ~/Library/Python/3.7/bin /usr/local/opt/python/libexec/bin
 
 ### Set PATH
 set -gx PATH $go_paths $rust_paths $python_paths $homebrew $home_bin $default_path

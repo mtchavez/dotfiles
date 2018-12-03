@@ -19,7 +19,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 # export PYTHONPATH=`brew --prefix`/lib/python3.6/site-packages:$HOME/Library/Python/3.6/lib/python/site-packages:$PYTHONPATH
 unset PYTHONPATH
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
-export PATH=$HOME/Library/Python/3.6/bin:$PATH
+export PATH=$HOME/Library/Python/3.7/bin:$PATH
 export VIRTENV=$HOME/.virtualenvs
 export WORKON_HOME=$HOME/.virtualenvs
 export PYTHONSTARTUP=$HOME/.pythonrc.py

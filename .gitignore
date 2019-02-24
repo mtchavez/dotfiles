@@ -47,6 +47,10 @@ coverage/
 .env
 Procfile.dev
 
+# Elixir
+_build
+.elixir_ls
+
 # R
 .Rhistory
 

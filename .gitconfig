@@ -25,6 +25,7 @@
     cm = commit -S -m
     co = checkout
     dc = diff --cached
+    dci = duet-commit
     df = diff
     fp = push --force-with-lease
     lg = log -p

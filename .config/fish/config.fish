@@ -166,6 +166,16 @@ function dcleanup
   docker rm (docker ps -a --filter "status=dead" -f -q 2> /dev/null) 2>/dev/null
 end
 
+function dprune
+  docker system prune
+end
+
+function dce
+  set service $argv[1]
+  set entrypoint $argv[2..-1]
+  docker-compose run --rm --entrypoint "$entrypoint" "$service"
+end
+
 function dremstop
   set state (docker inspect --format "{{.State.Running}}" $argv 2>/dev/null)
 

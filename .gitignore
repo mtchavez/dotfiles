@@ -156,3 +156,8 @@ fabric.properties
 
 .idea
 *.iml
+.gradle
+build
+
+.config/fish/custom/*
+!.config/fish/custom/.gitkeep

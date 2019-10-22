@@ -185,6 +185,15 @@ function dremstop
 end
 
 #
+# Load custom
+#
+if test -d ~/.config/fish/custom;
+  for customfile in ~/.config/fish/custom/*.fish
+    source $customfile
+  end
+end
+
+#
 # Autojump
 #
 [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish

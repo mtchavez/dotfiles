@@ -4,8 +4,17 @@ AllCops:
     - vendor/**/*
     - tmp/*
 
-Documentation:
+Style/Documentation:
   Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
 
 Metrics/MethodLength:
   Max: 15
@@ -18,8 +27,8 @@ Metrics/BlockLength:
     - '**/*.rake'
     - 'spec/**/*.rb'
 
-Metrics/LineLength:
-  Max: 120
+Style/HashEachMethods:
+  Enabled: true
 
 Style/PercentLiteralDelimiters:
   PreferredDelimiters:
@@ -35,3 +44,9 @@ Style/PercentLiteralDelimiters:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true

@@ -204,3 +204,10 @@ end
 if test -f ~/.asdf/asdf.fish; # and contains "true" $ASDF
   source ~/.asdf/asdf.fish
 end
+
+#
+# If using starship cross shell prompt, initialize it.
+#
+if test -f /usr/local/bin/starship;
+  starship init fish | source
+end

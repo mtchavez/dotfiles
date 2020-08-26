@@ -31,6 +31,9 @@ set -g VIRTENV $HOME/.virtualenvs
 set -g WORKON_HOME $HOME/.virtualenvs
 set -g PYTHONSTARTUP $HOME/.pythonrc.py
 
+### Elixir ###
+set -gx ERL_AFLAGS -kernel shell_history enabled
+
 ### Editor ###
 set -x EDITOR vim -f
 

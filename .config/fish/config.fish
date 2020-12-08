@@ -22,8 +22,11 @@ set -gx NODE_PATH /usr/local/share/npm/lib/node_modules /usr/local/lib/node /usr
 ### Python
 set python_paths ~/Library/Python/3.7/bin /usr/local/opt/python/libexec/bin
 
+### Java ###
+set java_paths ~/.jenv/bin
+
 ### Set PATH
-set -gx PATH $go_paths $rust_paths $python_paths $homebrew $home_bin $default_path
+set -gx PATH $go_paths $rust_paths $python_paths $homebrew $home_bin $default_path $java_paths
 
 ### Python ###
 set -e PYTHON_VERSION
@@ -213,6 +216,13 @@ end
 #
 if test -f /usr/local/bin/direnv;
   eval (direnv hook fish)
+end
+
+#
+# Jenv init
+#
+if test -f /usr/local/bin/jenv;
+  status --is-interactive; and source (jenv init -|psub)
 end
 
 #

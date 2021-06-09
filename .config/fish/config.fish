@@ -1,6 +1,6 @@
 ### PATH ###
 set default_path /usr/bin /usr/sbin /bin /sbin
-set homebrew /usr/local/bin
+set homebrew /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin
 set home_bin $HOME/bin
 
 ### Ruby

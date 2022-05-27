@@ -9,7 +9,7 @@ set home_bin $HOME/bin
 
 ### Go
 set -gx GOPATH $HOME/go
-set -gx GOROOT /usr/local/opt/go/libexec
+set -gx GOROOT /opt/homebrew/opt/go/libexec
 set -gx GOBIN $GOROOT/bin
 set go_paths $GOPATH/bin $GOBIN
 
@@ -20,7 +20,7 @@ set rust_paths $HOME/.cargo/bin
 set -gx NODE_PATH /usr/local/share/npm/lib/node_modules /usr/local/lib/node /usr/local/lib/node_modules
 
 ### Python
-set python_paths ~/Library/Python/3.9/bin /usr/local/opt/python/libexec/bin
+set python_paths ~/Library/Python/3.9/bin /opt/homebrew/opt/python/libexec/bin
 
 ### Java ###
 set java_paths ~/.jenv/bin
@@ -202,7 +202,7 @@ end
 #
 # Autojump
 #
-[ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish
+[ -f /opt/homebrew/share/autojump/autojump.fish ]; and source /opt/homebrew/share/autojump/autojump.fish
 
 #
 # Load ASDF Version Manager if exists and is asked for
@@ -214,20 +214,20 @@ end
 #
 # Direnv hook
 #
-if test -f /usr/local/bin/direnv;
+if test -f /opt/homebrew/bin/direnv;
   eval (direnv hook fish)
 end
 
 #
 # Jenv init
 #
-if test -f /usr/local/bin/jenv;
+if test -f /opt/homebrew/bin/jenv;
   status --is-interactive; and source (jenv init -|psub)
 end
 
 #
 # If using starship cross shell prompt, initialize it.
 #
-if test -f /usr/local/bin/starship;
+if test -f /opt/homebrew/bin/starship;
   starship init fish | source
 end

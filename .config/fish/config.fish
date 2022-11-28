@@ -19,6 +19,9 @@ set rust_paths $HOME/.cargo/bin
 ### Node
 set -gx NODE_PATH /usr/local/share/npm/lib/node_modules /usr/local/lib/node /usr/local/lib/node_modules
 
+set pnpm_home /Users/mtchavez/Library/pnpm
+set -gx PNPM_HOME $pnpm_home
+
 ### Python
 set python_paths ~/Library/Python/3.9/bin /opt/homebrew/opt/python/libexec/bin
 
